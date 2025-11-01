@@ -1,0 +1,308 @@
+/* --- Cài đặt chung --- */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  background: #f8f8f8;
+  color: #333;
+}
+/* Ký hiệu CSS cho class phải có dấu chấm */
+.hidden {
+  display: none;
+}
+
+/* --- Header & Navigation (Đã Sửa) --- */
+header {
+  background: #2e8b57; /* Xanh lá đậm - Forest Green */
+  color: #fff;
+  display: flex; /* Bật Flexbox */
+  justify-content: space-between; /* Đẩy h1 và nav ra hai bên */
+  align-items: center;
+  padding: 15px 40px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px; /* Thêm font-size */
+  color: #fff;
+}
+
+nav {
+  display: flex; /* Bật Flexbox cho các liên kết */
+  gap: 25px; /* Thêm khoảng cách giữa các mục */
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  /* margin-left: 20px;  Đã thay thế bằng gap trong nav */
+  font-weight: 500;
+  transition: color 0.2s;
+  white-space: nowrap; /* Ngăn xuống dòng */
+}
+
+nav a:hover,
+nav a.active {
+  color: #87ceeb; /* Xanh dương nhạt - Sky Blue */
+}
+
+/* --- Hero Section (Trang chủ) --- */
+.hero {
+  background: linear-gradient(
+    135deg,
+    #87ceeb 0%,
+    #e0f7fa 100%
+  ); /* Gradient xanh dương nhạt */
+  color: #2e8b57; /* Xanh lá đậm */
+  text-align: center;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-logo {
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+  background-color: transparent;
+  border-radius: 8px;
+}
+
+.hero-text h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #2e8b57; /* Xanh lá đậm */
+}
+
+.hero-text p {
+  font-size: 18px;
+  font-weight: 300;
+  color: #2e8b57; /* Xanh lá đậm */
+}
+
+/* --- Sản phẩm --- */
+.product-list {
+  padding: 40px 20px;
+}
+
+.product-list h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2e8b57; /* Xanh lá đậm */
+}
+
+.product-list .grid,
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product {
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(46, 139, 87, 0.1); /* Đổ bóng xanh lá */
+  padding: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 2px solid #87ceeb; /* Viền xanh dương nhạt */
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(46, 139, 87, 0.2); /* Đổ bóng xanh lá */
+}
+
+.product img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.product button {
+  margin-top: 10px;
+  padding: 10px 16px;
+  background-color: #2e8b57; /* Xanh lá đậm */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.3s;
+}
+
+.product button:hover {
+  background-color: #87ceeb; /* Xanh dương nhạt khi hover */
+  color: #2e8b57; /* Chữ xanh lá khi hover */
+}
+
+/* --- Giới thiệu --- */
+.about-shop,
+.contact-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    #e0f7fa 0%,
+    #ffffff 100%
+  ); /* Gradient xanh dương rất nhạt */
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-container img {
+  width: 420px;
+  max-width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(46, 139, 87, 0.15); /* Đổ bóng xanh lá */
+  border: 2px solid #87ceeb; /* Viền xanh dương nhạt */
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  text-align: left;
+}
+
+.about-text h2 {
+  color: #2e8b57; /* Xanh lá đậm */
+}
+
+/* --- Liên hệ --- */
+.contact-section h2 {
+  color: #2e8b57; /* Xanh lá đậm */
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 2px solid #87ceeb; /* Viền xanh dương nhạt */
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  background-color: #f0f8ff; /* Nền xanh dương rất nhạt */
+}
+
+.contact-form button {
+  background-color: #2e8b57; /* Xanh lá đậm */
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-weight: 500;
+}
+
+.contact-form button:hover {
+  background-color: #87ceeb; /* Xanh dương nhạt khi hover */
+  color: #2e8b57; /* Chữ xanh lá khi hover */
+}
+
+/* --- Giỏ hàng --- */
+.cart-page {
+  max-width: 900px;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px 40px;
+  box-shadow: 0 4px 12px rgba(46, 139, 87, 0.1); /* Đổ bóng xanh lá */
+  min-height: 300px;
+  border: 2px solid #87ceeb; /* Viền xanh dương nhạt */
+}
+
+#cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 2px solid #87ceeb; /* Viền xanh dương nhạt */
+  padding-bottom: 15px;
+}
+
+.cart-item img {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 2px solid #87ceeb; /* Viền xanh dương nhạt */
+}
+
+.cart-page > button {
+  /* Nút Thanh toán */
+  display: block;
+  margin: 30px auto 0;
+  background: #2e8b57; /* Xanh lá đậm */
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cart-page > button:hover {
+  background: #87ceeb; /* Xanh dương nhạt khi hover */
+  color: #2e8b57; /* Chữ xanh lá khi hover */
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #2e8b57; /* Xanh lá đậm */
+  color: #fff;
+  margin-top: 40px;
+}
+
+/* --- Responsive (Đã Sửa) --- */
+@media (max-width: 768px) {
+  /* Dùng 768px cho breakpoint */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  nav {
+    margin-top: 10px;
+    flex-direction: column; /* Chuyển nav về dạng cột */
+    gap: 5px; /* Khoảng cách nhỏ hơn */
+  }
+
+  nav a {
+    display: block;
+    margin: 5px 0;
+  }
+}
